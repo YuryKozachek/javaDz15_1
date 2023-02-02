@@ -1,5 +1,7 @@
 package ru.netology.javaDz15_1;
 
+import java.util.Comparator;
+
 public class TicketRepo {
     private Ticket[] ticketsArray = new Ticket[0];
 

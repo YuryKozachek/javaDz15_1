@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: ru.netology.javaDz15_1Test.TicketManagerTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.068 s - in ru.netology.javaDz15_1Test.TicketManagerTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.076 s - in ru.netology.javaDz15_1Test.TicketManagerTest
