@@ -1,5 +1,6 @@
 package ru.netology.javaDz15_1;
 
+import java.util.Arrays;
 import java.util.Comparator;
 
 public class TicketManager {
@@ -16,7 +17,7 @@ public class TicketManager {
     public Ticket[] findByFromAndTo(String from, String to) {
         Ticket[] result = new Ticket[0];
         for (Ticket ticket : repo.findAllTicket()) {
-            if (from == ticket.getAirportFrom() && to == ticket.getAirportTo()) {
+            if (from.equals(ticket.getAirportFrom()) && to.equals(ticket.getAirportTo())) {
                 Ticket[] tmp = new Ticket[result.length + 1];
                 for (int i = 0; i < result.length; i++) {
                     tmp[i] = result[i];
@@ -25,13 +26,14 @@ public class TicketManager {
                 result = tmp;
             }
         }
+        Arrays.sort(result);
         return result;
     }
 
     public Ticket[] findByTravelTimeComparator(String from, String to, Comparator<Ticket> comparator) {
         Ticket[] result = new Ticket[0];
         for (Ticket ticket : repo.findAllTicket()) {
-            if (from == ticket.getAirportFrom() && to == ticket.getAirportTo()) {
+            if (from.equals(ticket.getAirportFrom()) && to.equals(ticket.getAirportTo())) {
                 Ticket[] tmp = new Ticket[result.length + 1];
                 for (int i = 0; i < result.length; i++) {
                     tmp[i] = result[i];
@@ -40,6 +42,8 @@ public class TicketManager {
                 result = tmp;
             }
         }
+
+        Arrays.sort(result, comparator);
         return result;
     }
 }

@@ -33,8 +33,6 @@ public class TicketManagerTest {
         manager.addTicket(ticket5);
         manager.addTicket(ticket6);
 
-        Arrays.sort(repo.getTicketsArray());
-
         Ticket[] expected = {ticket6, ticket2, ticket4, ticket5, ticket3};
         Ticket[] actual = manager.findByFromAndTo("DME", "AER");
 
@@ -50,8 +48,6 @@ public class TicketManagerTest {
         manager.addTicket(ticket6);
         manager.addTicket(ticket7);
 
-        Arrays.sort(repo.getTicketsArray());
-
         Ticket[] expected = {ticket6, ticket4, ticket5, ticket7};
         Ticket[] actual = manager.findByFromAndTo("DME", "AER");
 
@@ -66,8 +62,6 @@ public class TicketManagerTest {
         manager.addTicket(ticket5);
         manager.addTicket(ticket6);
         manager.addTicket(ticket7);
-
-        Arrays.sort(repo.getTicketsArray());
 
         Ticket[] expected = new Ticket[0];
         Ticket[] actual = manager.findByFromAndTo("DME", "KZN");
@@ -86,7 +80,6 @@ public class TicketManagerTest {
         manager.addTicket(ticket6);
         manager.addTicket(ticket7);
 
-        Arrays.sort(repo.getTicketsArray(), travelTimeComparator);
 
         Ticket[] expected = {ticket5, ticket3, ticket4, ticket2, ticket7, ticket6};
         Ticket[] actual = manager.findByTravelTimeComparator("DME", "AER", travelTimeComparator);
@@ -104,8 +97,6 @@ public class TicketManagerTest {
         manager.addTicket(ticket5);
         manager.addTicket(ticket6);
         manager.addTicket(ticket7);
-
-        Arrays.sort(repo.getTicketsArray(), travelTimeComparator);
 
         Ticket[] expected = new Ticket[0];
         Ticket[] actual = manager.findByTravelTimeComparator("SVO", "KAZ", travelTimeComparator);
